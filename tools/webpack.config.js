@@ -1,5 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
+// import HtmlWebpackPlugin from 'html-webpack-plugin';
 import AssetsPlugin from 'assets-webpack-plugin';
 import nodeExternals from 'webpack-node-externals';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';

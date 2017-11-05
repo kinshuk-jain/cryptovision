@@ -104,5 +104,11 @@ module.exports = {
         moduleDirectory: ['node_modules', 'src'],
       },
     },
+    "import/ignore": [
+      "node_modules",
+      "functions",
+      ".scss$",
+      "package.json"
+    ]
   },
 };
