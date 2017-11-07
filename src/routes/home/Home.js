@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 
+import PostCard from '../../components/PostCard';
+import SuggestedQues from '../../components/SuggestedQues';
+
 class Home extends React.Component {
   static propTypes = {
     news: PropTypes.arrayOf(
@@ -18,19 +21,20 @@ class Home extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <h1>React.js News</h1>
-          {this.props.news.map(item => (
-            <article key={item.link} className={s.newsItem}>
-              <h1 className={s.newsTitle}>
-                <a href={item.link}>{item.title}</a>
-              </h1>
-              <div
-                className={s.newsDesc}
-                // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{ __html: item.content }}
-              />
-            </article>
-          ))}
+          <h1>Q & A</h1>
+          <div className={s.left}>
+            {
+              [
+                <PostCard />,
+                <PostCard />,
+                <PostCard />,
+                <PostCard />
+              ]
+            }
+          </div>
+          <div className={s.right}>
+            <SuggestedQues />
+          </div>
         </div>
       </div>
     );

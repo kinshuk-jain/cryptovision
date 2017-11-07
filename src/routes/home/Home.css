@@ -38,3 +38,15 @@
     max-width: 100%;
   }
 }
+
+.left {
+  display: inline-block;
+  width: 74%;
+  vertical-align: top;
+}
+
+.right {
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+}

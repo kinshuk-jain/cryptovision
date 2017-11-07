@@ -1082,13 +1082,13 @@ exports.push([module.i, "html{display:-ms-flexbox;display:flex;-ms-flex-align:ce
 /* 26 */
 /***/ (function(module, exports) {
 
-module.exports = require("babel-runtime/core-js/json/stringify");
+// module.exports = require("babel-runtime/core-js/json/stringify");
 
 /***/ }),
 /* 27 */
 /***/ (function(module, exports) {
 
-module.exports = require("babel-runtime/helpers/slicedToArray");
+// module.exports = require("babel-runtime/helpers/slicedToArray");
 
 /***/ }),
 /* 28 */
