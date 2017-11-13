@@ -20,6 +20,7 @@ html {
 
 body {
   margin: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -175,4 +176,20 @@ textarea {
   h3 {
     page-break-after: avoid;
   }
+}
+
+.topBarContainer {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+.child {
+  position: relative;
+  top: 80px;
+}
+
+.addTopBarHeight {
+  top: 110px;
 }

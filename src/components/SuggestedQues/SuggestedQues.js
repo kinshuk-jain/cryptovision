@@ -6,8 +6,11 @@ class SuggestedQues extends React.Component {
   render() {
     return (
       <div className={s.container}>
-        hihihihihihihihihihihihiihihihii
-      </div> 
+        <div className={s.title}>Popular Questions</div>
+        <div className={s.question}>question 1</div>
+        <div className={s.question}>question 1</div>
+        <div className={s.question}>question 1</div>
+      </div>
     );
   }
 }

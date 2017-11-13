@@ -1,0 +1,35 @@
+.searchBar {
+  width: 50%;
+  float: left;
+  padding: 6px 0 0;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+  border-radius: 2px;
+  border: 1px solid darkgrey;
+  background: 
+}
+
+input {
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 0 8px 8px 43px;
+  border: none;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+@media (max-width: 1200px) {
+  .searchBar {
+    width: 43%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .searchBar {
+    width: 40%;
+  }
+}

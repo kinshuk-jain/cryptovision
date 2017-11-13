@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  background: #3e95f2;
+  height: 26px;
+  padding: 5px 4%;
+}
+
+.cross {
+  font-weight: 600;
+  display: inline-block;
+  cursor: pointer;
+  color: #000;
+  position: absolute;
+  right: 20px;
+}

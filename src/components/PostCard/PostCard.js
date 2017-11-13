@@ -4,11 +4,7 @@ import s from './PostCard.css';
 
 class PostCard extends React.Component {
   render() {
-    return (
-      <div className={s.container}>
-        Post ... Post ..
-      </div>
-    );
+    return <div className={s.container}>Post ... Post ..</div>;
   }
 }
 

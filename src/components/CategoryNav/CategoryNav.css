@@ -1,0 +1,16 @@
+@import '../variables.css';
+
+.container {
+  background: #333;
+  color: #fff;
+  width: 100%;
+  min-height: 200px;
+  border-radius: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}

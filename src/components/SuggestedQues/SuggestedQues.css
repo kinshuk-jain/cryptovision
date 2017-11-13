@@ -1,4 +1,21 @@
 .container {
-    border-radius: 15px;
-    border: 1px solid darkblue;
+  border-radius: 15px;
+  border: 1px solid darkblue;
+  text-align: center;
+  overflow: hidden;
+}
+
+.question {
+  cursor: pointer;
+  padding: 5px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.question:hover {
+  background: #f5f5f5;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
 }

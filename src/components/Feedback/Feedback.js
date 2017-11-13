@@ -6,9 +6,7 @@ class Feedback extends React.Component {
   render() {
     return (
       <div className={s.root}>
-        <div className={s.container}>
-          Feedback
-        </div>
+        <div className={s.container}>Feedback</div>
       </div>
     );
   }
