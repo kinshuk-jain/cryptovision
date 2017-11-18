@@ -18,10 +18,14 @@ class Layout extends React.Component {
     hideTopBar: PropTypes.bool,
   };
 
+  static defaultProps = {
+    hideTopBar: false,
+  };
+
   render() {
     const { hideTopBar } = this.props;
     return (
-      <div>
+      <div className={s.pageContainer}>
         <div className={s.topBarContainer}>
           <TopBar />
           <Header />

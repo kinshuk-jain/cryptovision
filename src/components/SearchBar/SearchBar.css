@@ -1,19 +1,20 @@
 .searchBar {
   width: 50%;
-  float: left;
   padding: 6px 0 0;
   top: 50%;
+  display: inline-block;
   position: relative;
   transform: translateY(-50%);
   border-radius: 2px;
-  border: 1px solid darkgrey;
-  background: 
+  border: 1px solid var(--Gallery, #efefef);
 }
 
 input {
   width: 100%;
   font-size: 1.3rem;
+  font-weight: 500;
   padding: 0 8px 8px 43px;
+  color: var(--Trout, #4c505d);
   border: none;
   background-color: transparent;
 }

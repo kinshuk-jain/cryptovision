@@ -1,6 +1,7 @@
 .container {
   border-radius: 15px;
-  border: 1px solid darkblue;
+  border: 1px solid var(--Gallery, #efefef);
+  background: var(--White, #fff);
   width: 100%;
   height: 200px;
   margin: 15px 0;
@@ -9,4 +10,8 @@
 
 .container:first-child {
   margin-top: 0;
+}
+
+.container:hover {
+  box-shadow: 1px 1px #eee;
 }

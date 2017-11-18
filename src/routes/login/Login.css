@@ -32,18 +32,18 @@
   width: 100%;
   height: 46px;
   outline: 0;
-  border: 1px solid #ccc;
+  border: 1px solid var(--Silver, #ccc);
   border-radius: 0;
-  background: #fff;
+  background: var(--White, #fff);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  color: #616161;
+  color: var(--DoveGray, #616161);
   font-size: 18px;
   line-height: 1.3333333;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 .input:focus {
-  border-color: #0074c2;
+  border-color: var(--Lochmara, #0074c2);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 116, 194, 0.6);
 }
 
@@ -54,10 +54,10 @@
   padding: 10px 16px;
   width: 100%;
   outline: 0;
-  border: 1px solid #373277;
+  border: 1px solid var(--Minsk, #373277);
   border-radius: 0;
-  background: #373277;
-  color: #fff;
+  background: var(--Minsk, #373277);
+  color: var(--White, #fff);
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -70,18 +70,18 @@
 }
 
 .button:focus {
-  border-color: #0074c2;
+  border-color: var(--Lochmara, #0074c2);
   box-shadow: 0 0 8px rgba(0, 116, 194, 0.6);
 }
 
 .facebook {
-  border-color: #3b5998;
-  background: #3b5998;
+  border-color: var(--Chambray, #3b5998);
+  background: var(--Chambray, #3b5998);
   composes: button;
 }
 
 .facebook:hover {
-  background: #2d4373;
+  background: var(--Astronaut, #2d4373);
 }
 
 .google {
@@ -119,7 +119,7 @@
   display: block;
   margin-bottom: 15px;
   width: 100%;
-  color: #757575;
+  color: var(--Boulder, #757575);
   text-align: center;
   font-size: 80%;
 }
@@ -133,7 +133,7 @@
   margin-left: -20px;
   width: 40px;
   height: 10px;
-  background-color: #fff;
+  background-color: var(--White, #fff);
   content: '';
 }
 
@@ -143,6 +143,6 @@
   z-index: -2;
   display: block;
   width: 100%;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--Alto, #ddd);
   content: '';
 }

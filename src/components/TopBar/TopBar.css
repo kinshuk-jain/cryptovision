@@ -1,6 +1,7 @@
 .container {
   width: 100%;
-  background: #3e95f2;
+  background: var(--PictonBlue, #3e95f2);
+  color: var(--White, #fff);
   height: 26px;
   padding: 5px 4%;
 }
@@ -9,7 +10,7 @@
   font-weight: 600;
   display: inline-block;
   cursor: pointer;
-  color: #000;
+  color: var(--Black, #000);
   position: absolute;
   right: 20px;
 }

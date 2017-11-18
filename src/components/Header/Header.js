@@ -10,7 +10,7 @@ class Header extends Component {
     return (
       <div className={s.header}>
         <Link className={s.logoInfo} target="_self" to="/">
-          Logo
+          knowyourcrypto
         </Link>
         <SearchBar />
       </div>

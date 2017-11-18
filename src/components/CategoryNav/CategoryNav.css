@@ -1,16 +1,54 @@
 @import '../variables.css';
 
 .container {
-  background: #333;
-  color: #fff;
+  background: var(--Trout, #4C505D);
+  color: var(--White, #fff);
   width: 100%;
-  min-height: 200px;
   border-radius: 10px;
   margin-right: 10px;
   text-align: center;
+  position: relative;
 }
 
 .title {
   font-size: 16px;
   font-weight: 600;
+}
+
+.catList {
+  margin-top: 10px;
+  list-style: none;
+  padding: 10px 20px 10px 10px;
+}
+
+.catList li,
+.smallList li {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--Gallery, #efefef);
+}
+
+.catList li:last-child,
+.smallList li:last-child {
+  border: none;
+}
+
+.catList li:hover {
+  cursor: pointer;
+  color: var(--Silver, #ccc);
+}
+
+.caret {
+  position: absolute;
+  right: 5px;
+  color: var(--White, #fff);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.smallList {
+  margin: 0;
+  list-style: none;
+  padding: 10px 20px 10px 10px;
 }

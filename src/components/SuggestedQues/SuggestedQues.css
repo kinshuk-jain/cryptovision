@@ -1,6 +1,7 @@
 .container {
+  background: #fff;
   border-radius: 15px;
-  border: 1px solid darkblue;
+  border: 1px solid var(--Gallery, #efefef);
   text-align: center;
   overflow: hidden;
 }
@@ -8,14 +9,15 @@
 .question {
   cursor: pointer;
   padding: 5px 0;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted var(--Silver, #ccc);
 }
 
 .question:hover {
-  background: #f5f5f5;
+  background: var(--WildSand, #f5f5f5);
 }
 
 .title {
   font-size: 16px;
   font-weight: 600;
+  padding: 5px 0 10px 0;
 }

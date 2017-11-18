@@ -2,3 +2,4 @@
 
 export const SET_RUNTIME_VARIABLE = 'SET_RUNTIME_VARIABLE';
 export const SHOW_TOPBAR = 'SHOW_TOPBAR';
+export const SHOW_SIDEBAR = 'SHOW_SIDEBAR';

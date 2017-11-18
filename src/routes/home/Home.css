@@ -17,11 +17,25 @@
 }
 
 .mid {
-  width: 50%;
+  width: 51%;
   margin-left: 10px;
 }
 
 .right {
   width: 25%;
   margin-left: 10px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.smallLeft {
+  width: 8%;
+}
+
+.bigMid {
+  width: 65%;
 }
