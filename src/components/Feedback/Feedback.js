@@ -3,14 +3,17 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Feedback.css';
 
 import Modal from '../Modal';
+import data from './data.json';
 
 class Feedback extends React.Component {
   constructor(props) {
     super(props);
     this.modalCloseFn = this.modalCloseFn.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
       showYesModal: false,
       showNoModal: false,
+      value: 'select',
     };
   }
 
@@ -19,6 +22,10 @@ class Feedback extends React.Component {
       showYesModal: false,
       showNoModal: false,
     });
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
   }
 
   render() {
@@ -56,9 +63,30 @@ class Feedback extends React.Component {
           </Modal>
         )}
         {showNoModal && (
-          <Modal overlay closeFn={this.modalCloseFn} showCross>
-            <div>
-              Your feedback is very valuable to us. Please help us fix this
+          <Modal
+            overlay
+            closeFn={this.modalCloseFn}
+            showCross
+            width={40}
+            height={40}
+          >
+            <div className={s.negativeFeedback}>
+              <form>
+                <div>
+                  Your feedback is very valuable to us. Please let us know how
+                  can can we fix this
+                </div>
+                <div>Issue: </div>
+                <select value={this.state.value} onChange={this.handleChange}>
+                  <option value="select">Please select an issue</option>
+                  {data.issue.map((issue, index) => (
+                    <option key={index} value={issue}>
+                      {issue}
+                    </option>
+                  ))}
+                </select>
+                <textarea />
+              </form>
             </div>
           </Modal>
         )}

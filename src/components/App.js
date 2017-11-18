@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Provider as ReduxProvider } from 'react-redux';
 
+import s from '../commonStyles/loadFont.css';
+
 const ContextType = {
   // Enables critical path CSS rendering
   // https://github.com/kriasoft/isomorphic-style-loader
   insertCss: PropTypes.func.isRequired,
+  insertFontCss: PropTypes.func.isRequired,
   // Universal HTTP client
   fetch: PropTypes.func.isRequired,
   // Integrate Redux
@@ -45,6 +48,17 @@ class App extends React.PureComponent {
 
   getChildContext() {
     return this.props.context;
+  }
+
+  componentWillMount() {
+    if (!process.env.BROWSER) {
+      const { insertFontCss } = this.props.context;
+      this.removeCss = insertFontCss(s);
+    }
+  }
+
+  componentWillUnmount() {
+    this.removeCss();
   }
 
   render() {

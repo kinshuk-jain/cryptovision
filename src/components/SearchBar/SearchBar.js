@@ -6,6 +6,7 @@ class SearchBar extends Component {
   render() {
     return (
       <div className={s.searchBar}>
+        <i className="icon-search" />
         <input autoComplete="off" type="search" placeholder="search" />
       </div>
     );

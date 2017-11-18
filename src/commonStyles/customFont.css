@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+[data-icon]:before {
+  font-family: "kyc" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "kyc" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-left:before {
+  content: "\61";
+}
+.icon-angle-right:before {
+  content: "\62";
+}
+.icon-angle-up:before {
+  content: "\63";
+}
+.icon-angle-down:before {
+  content: "\64";
+}
+.icon-check-circle:before {
+  content: "\65";
+}
+.icon-file-image-o:before {
+  content: "\66";
+}
+.icon-bars:before {
+  content: "\67";
+}
+.icon-arrow-down:before {
+  content: "\68";
+}
+.icon-arrow-up:before {
+  content: "\69";
+}
+.icon-search:before {
+  content: "\6a";
+}
+.icon-bubble:before {
+  content: "\6b";
+}
+.icon-reload:before {
+  content: "\6c";
+}
+.icon-share:before {
+  content: "\6d";
+}
+.icon-exclamation-circle:before {
+  content: "\6e";
+}
+.icon-flag-o:before {
+  content: "\70";
+}
+.icon-question:before {
+  content: "\6f";
+}
+.icon-times:before {
+  content: "\71";
+}
