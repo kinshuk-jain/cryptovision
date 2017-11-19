@@ -1,5 +1,5 @@
 import React from 'react';
-import _ from 'lodash';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './TopBar.css';
@@ -7,8 +7,8 @@ import { closeTopBar } from '../../actions/topBarActions';
 
 class TopBar extends React.Component {
   static propTypes = {
-    hideTopBar: React.PropTypes.bool.isRequired,
-    closeTopBar: React.PropTypes.func.isRequired,
+    hideTopBar: PropTypes.bool.isRequired,
+    closeTopBar: PropTypes.func.isRequired,
   };
 
   render() {

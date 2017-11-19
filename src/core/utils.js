@@ -9,3 +9,10 @@ export const disableBodyScrolling = (condition, avoidFixed) => {
     !avoidFixed && (document.body.style.position = 'static'); // eslint-disable-line no-unused-expressions
   }
 };
+
+export function escapeHTML(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/"/g, '&quot;');
+}

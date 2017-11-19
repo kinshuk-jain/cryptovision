@@ -5,15 +5,21 @@ import s from './Feedback.css';
 import Modal from '../Modal';
 import data from './data.json';
 
+import { escapeHTML } from '../../core/utils';
+
 class Feedback extends React.Component {
   constructor(props) {
     super(props);
     this.modalCloseFn = this.modalCloseFn.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.comment = '';
     this.state = {
       showYesModal: false,
       showNoModal: false,
       value: 'select',
+      commentLength: 0,
+      invalidInput: false,
+      successSubmit: false,
     };
   }
 
@@ -28,8 +34,73 @@ class Feedback extends React.Component {
     this.setState({ value: event.target.value });
   }
 
+  changeComment(event) {
+    this.comment = event.target.value;
+    this.setState({ commentLength: this.comment.length });
+  }
+
+  formValidate() {
+    const desc = escapeHTML(this.comment);
+    if (this.issue.selectedIndex === 0) {
+      this.setState({ invalidInput: true, successSubmit: false });
+      return;
+    }
+    // TODO: submit form
+    this.setState({ successSubmit: true, invalidInput: false });
+  }
+
+  renderForm() {
+    const { commentLength, invalidInput } = this.state;
+    return (
+      <form>
+        <div className={s.modalTitle}>
+          Your feedback is very valuable to us. Please let us know how can can
+          we fix this
+        </div>
+        <div className={s.label}>Issue: </div>
+        <select
+          value={this.state.value}
+          onChange={this.handleChange}
+          ref={issue => {
+            this.issue = issue;
+          }}
+        >
+          <option value="select" disabled>
+            Please select an issue
+          </option>
+          {data.issue.map((issue, index) => (
+            <option key={index} value={issue}>
+              {issue}
+            </option>
+          ))}
+        </select>
+        {invalidInput && <div className={s.error}>Please select an issue</div>}
+        <div className={s.label}>Description: </div>
+        <div className={s.textareaContainer}>
+          <span className={s.wordCount}>{`${300 - commentLength} / 300`}</span>
+          <textarea
+            maxLength={300}
+            className={s.feedbackRow}
+            onChange={e => this.changeComment(e)}
+            placeholder="Please give us a detailed description"
+          />
+        </div>
+        <button
+          className={s.submit}
+          onClick={e => {
+            e.preventDefault();
+            e.stopPropagation();
+            this.formValidate();
+          }}
+        >
+          Submit
+        </button>
+      </form>
+    );
+  }
+
   render() {
-    const { showNoModal, showYesModal } = this.state;
+    const { showNoModal, showYesModal, successSubmit } = this.state;
     return (
       <div className={s.root}>
         <div className={s.container}>
@@ -38,6 +109,7 @@ class Feedback extends React.Component {
             className={s.feedbackBtn}
             onClick={() =>
               this.setState({ showYesModal: true, showNoModal: false })}
+            // TODO: Submit success
           >
             Yes
           </button>
@@ -68,25 +140,17 @@ class Feedback extends React.Component {
             closeFn={this.modalCloseFn}
             showCross
             width={40}
-            height={40}
+            height={60}
           >
             <div className={s.negativeFeedback}>
-              <form>
+              {!successSubmit ? (
+                this.renderForm()
+              ) : (
                 <div>
-                  Your feedback is very valuable to us. Please let us know how
-                  can can we fix this
+                  Successfully submitted. We will try to address this issue as
+                  soon as possible. Thank you!
                 </div>
-                <div>Issue: </div>
-                <select value={this.state.value} onChange={this.handleChange}>
-                  <option value="select">Please select an issue</option>
-                  {data.issue.map((issue, index) => (
-                    <option key={index} value={issue}>
-                      {issue}
-                    </option>
-                  ))}
-                </select>
-                <textarea />
-              </form>
+              )}
             </div>
           </Modal>
         )}

@@ -36,6 +36,7 @@
 
 .crossInfo {
   position: absolute;
+  cursor: pointer;
   right: 0.8rem;
   top: 0;
   padding: 1rem;

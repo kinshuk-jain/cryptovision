@@ -229,10 +229,11 @@ const config = {
       // Return public URL for all assets unless explicitly excluded
       // DO NOT FORGET to update `exclude` list when you adding a new loader
       {
+        test: /\.(eot|ttf|wav|mp3|svg|woff2?)$/,
         exclude: [reScript, reStyle, reImage, /\.json$/, /\.txt$/, /\.md$/],
         loader: 'file-loader',
         options: {
-          name: staticAssetName,
+          name: '[path][name].[ext]',
         },
       },
 
@@ -324,6 +325,9 @@ const clientConfig = {
           // Minimize all JavaScript output of chunks
           // https://github.com/mishoo/UglifyJS2#compressor-options
           new webpack.optimize.UglifyJsPlugin({
+            parse: {
+              html5_comments: false,
+            },
             compress: {
               warnings: isVerbose,
               unused: true,
@@ -332,6 +336,7 @@ const clientConfig = {
             },
             mangle: {
               screw_ie8: true,
+              toplevel: true,
             },
             output: {
               comments: false,
