@@ -12,12 +12,12 @@
 
 .left, .mid, .right {
   display: inline-block;
-  width: 22%;
+  width: 20%;
   vertical-align: top;
 }
 
 .mid {
-  width: 51%;
+  width: 53%;
   margin-left: 10px;
 }
 

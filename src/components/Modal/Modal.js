@@ -50,7 +50,7 @@ class Modal extends Component {
         >
           {showCross ? (
             <div className={s.crossInfo} onClick={closeFn}>
-              X
+              <i className="icon-x" />
             </div>
           ) : null}
           <div className={s.contentContainer}>{children}</div>

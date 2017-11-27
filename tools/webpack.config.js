@@ -230,10 +230,9 @@ const config = {
       // DO NOT FORGET to update `exclude` list when you adding a new loader
       {
         test: /\.(eot|ttf|wav|mp3|svg|woff2?)$/,
-        exclude: [reScript, reStyle, reImage, /\.json$/, /\.txt$/, /\.md$/],
         loader: 'file-loader',
         options: {
-          name: '[path][name].[ext]',
+          name: staticAssetName,
         },
       },
 

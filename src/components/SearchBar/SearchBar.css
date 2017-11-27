@@ -9,11 +9,22 @@
   border: 1px solid var(--Gallery, #efefef);
 }
 
+.searchBar i {
+  width: 20px;
+  color: var(--Trout, #4c505d);
+  height: 20px;
+  position: relative;
+  top: 4px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 input {
-  width: 100%;
+  width: 97%;
   font-size: 1.3rem;
   font-weight: 500;
-  padding: 0 8px 8px 43px;
+  padding: 0 8px 8px 33px;
   color: var(--Trout, #4c505d);
   border: none;
   background-color: transparent;

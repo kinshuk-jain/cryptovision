@@ -13,6 +13,8 @@ class Header extends Component {
           knowyourcrypto
         </Link>
         <SearchBar />
+        <div className={s.askQuestion}>Answer Question</div>
+        <div className={s.askQuestion}>Ask Question</div>
       </div>
     );
   }

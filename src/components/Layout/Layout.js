@@ -41,9 +41,10 @@ class Layout extends React.Component {
 }
 
 export default withStyles(normalizeCss, s)(
-  connect(({ hideTopBar }) => {
-    return {
+  connect(
+    ({ hideTopBar }) => ({
       hideTopBar,
-    };
-  }, null)(Layout),
+    }),
+    null,
+  )(Layout),
 );

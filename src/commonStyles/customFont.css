@@ -1,79 +1,108 @@
-@charset "UTF-8";
+:global {
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'kyc' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-[data-icon]:before {
-  font-family: "kyc" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "kyc" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  .icon-BCH-alt:before {
+    content: "\e905";
+  }
+  .icon-BTC-alt:before {
+    content: "\e906";
+  }
+  .icon-BTCD-alt:before {
+    content: "\e907";
+  }
+  .icon-DASH-alt:before {
+    content: "\e908";
+  }
+  .icon-ETC:before {
+    content: "\e909";
+  }
+  .icon-GLD:before {
+    content: "\e90a";
+  }
+  .icon-OMG:before {
+    content: "\e90b";
+  }
+  .icon-XRP-alt:before {
+    content: "\e90c";
+  }
+  .icon-check-circle:before {
+    content: "\65";
+  }
+  .icon-bars:before {
+    content: "\67";
+  }
+  .icon-bubble:before {
+    content: "\6b";
+  }
+  .icon-reload:before {
+    content: "\6c";
+  }
+  .icon-share:before {
+    content: "\6d";
+  }
+  .icon-question:before {
+    content: "\6f";
+  }
+  .icon-arrow-down:before {
+    content: "\f03f";
+  }
+  .icon-arrow-small-down:before {
+    content: "\f0a0";
+  }
+  .icon-arrow-small-up:before {
+    content: "\f09f";
+  }
+  .icon-arrow-up:before {
+    content: "\f03d";
+  }
+  .icon-chevron-down:before {
+    content: "\f0a3";
+  }
+  .icon-chevron-left:before {
+    content: "\f0a4";
+  }
+  .icon-chevron-right:before {
+    content: "\f078";
+  }
+  .icon-chevron-up:before {
+    content: "\f0a2";
+  }
+  .icon-mail:before {
+    content: "\f03b";
+  }
+  .icon-x:before {
+    content: "\f081";
+  }
+  .icon-image:before {
+    content: "\e90d";
+  }
+  .icon-flag:before {
+    content: "\e900";
+  }
+  .icon-flag2:before {
+    content: "\e901";
+  }
+  .icon-bookmark:before {
+    content: "\e902";
+  }
+  .icon-bookmark2:before {
+    content: "\e903";
+  }
+  .icon-search:before {
+    content: "\e904";
+  }
 }
-
-.icon-angle-left:before {
-  content: "\61";
-}
-.icon-angle-right:before {
-  content: "\62";
-}
-.icon-angle-up:before {
-  content: "\63";
-}
-.icon-angle-down:before {
-  content: "\64";
-}
-.icon-check-circle:before {
-  content: "\65";
-}
-.icon-file-image-o:before {
-  content: "\66";
-}
-.icon-bars:before {
-  content: "\67";
-}
-.icon-arrow-down:before {
-  content: "\68";
-}
-.icon-arrow-up:before {
-  content: "\69";
-}
-.icon-search:before {
-  content: "\6a";
-}
-.icon-bubble:before {
-  content: "\6b";
-}
-.icon-reload:before {
-  content: "\6c";
-}
-.icon-share:before {
-  content: "\6d";
-}
-.icon-exclamation-circle:before {
-  content: "\6e";
-}
-.icon-flag-o:before {
-  content: "\70";
-}
-.icon-question:before {
-  content: "\6f";
-}
-.icon-times:before {
-  content: "\71";
-}
+  

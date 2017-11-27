@@ -3,9 +3,10 @@
   border: 1px solid var(--Gallery, #efefef);
   background: var(--White, #fff);
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   margin: 15px 0;
   text-align: center;
+  padding: 16px;
 }
 
 .container:first-child {
@@ -14,4 +15,34 @@
 
 .container:hover {
   box-shadow: 1px 1px #eee;
+}
+
+.question {
+  font-weight: 600;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  width: 100%;
+  border-bottom: 1px solid var(--Gallery, #efefef);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.answerContainer {
+  padding: 10px 5px;
+  min-height: 100px;
+  width: 100%;
+}
+
+.voteContainer {
+  display: inline-block;
+  width: 15%;
+  position: relative;
+  left: -20px;
+  vertical-align: top;
+}
+
+.answer {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
 }

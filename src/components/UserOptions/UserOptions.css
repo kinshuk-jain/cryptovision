@@ -1,0 +1,36 @@
+
+.userOptions {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 14px;
+  border-top: 1px solid var(--Gallery, #efefef);
+  list-style: none;
+  padding: 0;
+  padding-top: 10px;
+  margin: 0;
+  color: var(--Trout, #4c505d);
+}
+
+.userOptions li {
+  display: inline-block;
+  width: 25%;
+  border-right: 1px solid var(--Trout, #4c505d);
+}
+
+.userOptions li:hover {
+  cursor: pointer;
+  color: var(--Black, #000);
+}
+
+.userOptions li:last-child {
+  border: none;
+}
+
+.userOptions li i {
+  position: relative;
+  top: 2px;
+}
+
+.optionText {
+  padding: 0 5px;
+}

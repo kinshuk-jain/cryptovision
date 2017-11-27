@@ -20,6 +20,7 @@ class Feedback extends React.Component {
       commentLength: 0,
       invalidInput: false,
       successSubmit: false,
+      invalidText: false,
     };
   }
 
@@ -42,15 +43,33 @@ class Feedback extends React.Component {
   formValidate() {
     const desc = escapeHTML(this.comment);
     if (this.issue.selectedIndex === 0) {
-      this.setState({ invalidInput: true, successSubmit: false });
+      this.setState({
+        invalidInput: true,
+        successSubmit: false,
+        invalidText: false,
+      });
+      return;
+    } else if (
+      this.issue.selectedIndex === data.issue.length &&
+      this.text.value.length < 30
+    ) {
+      this.setState({
+        invalidText: true,
+        invalidInput: false,
+        successSubmit: false,
+      });
       return;
     }
     // TODO: submit form
-    this.setState({ successSubmit: true, invalidInput: false });
+    this.setState({
+      successSubmit: true,
+      invalidInput: false,
+      invalidText: false,
+    });
   }
 
   renderForm() {
-    const { commentLength, invalidInput } = this.state;
+    const { commentLength, invalidInput, invalidText } = this.state;
     return (
       <form>
         <div className={s.modalTitle}>
@@ -79,12 +98,20 @@ class Feedback extends React.Component {
         <div className={s.textareaContainer}>
           <span className={s.wordCount}>{`${300 - commentLength} / 300`}</span>
           <textarea
+            ref={text => {
+              this.text = text;
+            }}
             maxLength={300}
             className={s.feedbackRow}
             onChange={e => this.changeComment(e)}
             placeholder="Please give us a detailed description"
           />
         </div>
+        {invalidText && (
+          <div className={s.error}>
+            Please enter the reason in minimum 30 words
+          </div>
+        )}
         <button
           className={s.submit}
           onClick={e => {

@@ -78,6 +78,10 @@ module.exports = {
 
     // No need to force key events for click events
     'jsx-ally/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+
+    // allow array indices to be used in keys
+    'react/no-array-index-key': 'off',
 
     // Turn off default export warning
     'import/prefer-default-export': 'off',
@@ -110,11 +114,6 @@ module.exports = {
         moduleDirectory: ['node_modules', 'src'],
       },
     },
-    "import/ignore": [
-      "node_modules",
-      "functions",
-      ".scss$",
-      "package.json"
-    ]
+    'import/ignore': ['node_modules', 'functions', '.scss$', 'package.json'],
   },
 };

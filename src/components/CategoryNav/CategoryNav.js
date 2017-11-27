@@ -20,24 +20,60 @@ class CategoryNav extends React.Component {
     return this.props.showSidebar ? (
       <div className={s.container}>
         <div className={s.title}>Categories</div>
-        <div className={s.caret} onClick={() => this.props.showNavBar(false)}>LL</div>
+        <div className={s.caret} onClick={() => this.props.showNavBar(false)}>
+          <i className="icon-chevron-left" />
+        </div>
         <ul className={s.catList}>
-          <li>Bitcoin</li>
-          <li>Bitcoin Cash</li>
-          <li>Bitcoin Gold</li>
-          <li>Ethereum</li>
-          <li>LiteCoin</li>
-          <li>Ripple</li>
-          <li>OmiseGo</li>
+          <li>
+            <i className="icon-BTC-alt" /> Bitcoin
+          </li>
+          <li>
+            <i className="icon-BCH-alt" /> Bitcoin Cash
+          </li>
+          <li>
+            <i className="icon-GLD" /> Gold Coin
+          </li>
+          <li>
+            <i className="icon-ETC" /> Ethereum
+          </li>
+          <li>
+            <i className="icon-DASH-alt" /> Dash
+          </li>
+          <li>
+            <i className="icon-XRP-alt" /> Ripple
+          </li>
+          <li>
+            <i className="icon-OMG" /> OmiseGo
+          </li>
         </ul>
       </div>
     ) : (
       <div className={s.container}>
-        <div className={s.caret} onClick={() => this.props.showNavBar(true)}>LL</div>
+        <div className={s.caret} onClick={() => this.props.showNavBar(true)}>
+          <i className="icon-chevron-right" />
+        </div>
         <ul className={s.smallList}>
-          <li>B</li>
-          <li>B</li>
-          <li>B</li>
+          <li>
+            <i className="icon-BTC-alt" />{' '}
+          </li>
+          <li>
+            <i className="icon-BCH-alt" />{' '}
+          </li>
+          <li>
+            <i className="icon-GLD" />{' '}
+          </li>
+          <li>
+            <i className="icon-ETC" />{' '}
+          </li>
+          <li>
+            <i className="icon-DASH-alt" />{' '}
+          </li>
+          <li>
+            <i className="icon-XRP-alt" />{' '}
+          </li>
+          <li>
+            <i className="icon-OMG" />{' '}
+          </li>
         </ul>
       </div>
     );

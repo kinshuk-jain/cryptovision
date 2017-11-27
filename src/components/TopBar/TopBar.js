@@ -17,7 +17,7 @@ class TopBar extends React.Component {
       <div className={s.container}>
         Notification type message if any
         <div className={s.cross} onClick={() => this.props.closeTopBar(true)}>
-          x
+          <i className="icon-x" />
         </div>
       </div>
     ) : null;

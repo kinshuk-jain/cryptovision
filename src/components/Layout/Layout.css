@@ -1,5 +1,4 @@
-@import '../variables.css';
-@import '../../commonstyles/customFont.css';
+@import '../../commonStyles/customFont.css';
 
 /*
  * normalize.css is imported in JS file.
@@ -12,10 +11,11 @@
  * ========================================================================== */
 
 html {
-  color: #222;
-  font-weight: 100;
+  color: var(--Trout, #4c505d);
+  font-weight: 400;
   font-size: 1em; /* ~16px; */
   font-family: var(--font-family-base, sans-serif);
+  box-sizing: border-box;
   line-height: 1.375; /* ~22px */
 }
 
@@ -23,6 +23,10 @@ body {
   margin: 0;
   width: 100%;
   background: var(--Alabaster, #fafafa);
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 a {
@@ -73,16 +77,6 @@ img,
 svg,
 video {
   vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
 }
 
 /*
