@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-expressions */
+
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -12,6 +14,8 @@ import TopBar from '../TopBar';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
 
+import { addRemoveScrollEventListener } from '../../core/utils';
+
 class Layout extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -21,6 +25,21 @@ class Layout extends React.Component {
   static defaultProps = {
     hideTopBar: false,
   };
+
+  state = {
+    showScrollToTop: false,
+  };
+
+  componentDidMount() {
+    addRemoveScrollEventListener(() => {
+      const top = window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 200) {
+        !this.state.showScrollToTop && this.setState({ showScrollToTop: true });
+        return;
+      }
+      this.state.showScrollToTop && this.setState({ showScrollToTop: false });
+    });
+  }
 
   render() {
     const { hideTopBar } = this.props;
@@ -35,6 +54,16 @@ class Layout extends React.Component {
           <Feedback />
           <Footer />
         </div>
+        {this.state.showScrollToTop && (
+          <div
+            className={s.scrollToTop}
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+          >
+            <i className="icon-chevron-up" />
+          </div>
+        )}
       </div>
     );
   }

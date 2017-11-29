@@ -19,7 +19,7 @@ class CategoryNav extends React.Component {
   render() {
     return this.props.showSidebar ? (
       <div className={s.container}>
-        <div className={s.title}>Categories</div>
+        <div className={s.title}>Currencies</div>
         <div className={s.caret} onClick={() => this.props.showNavBar(false)}>
           <i className="icon-chevron-left" />
         </div>

@@ -32,7 +32,7 @@ class Modal extends Component {
 
     const linkStyle = {
       height: `${height}%`,
-      top: `${top}%`,
+      top: `${top || (100 - height) / 2 - 1}%`,
       width: `${width}%`,
       left: `${(100 - width) / 2 - 1}%`,
       overflow,

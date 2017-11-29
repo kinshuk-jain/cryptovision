@@ -1,13 +1,9 @@
 :root {
-  /**********************************************************************************
-  DO NOT USE CUSTOM PROPERTIES WITH PSEUDO ELEMENTS AND ANIMATIONS DUE TO IE EDGE BUG
-  ***********************************************************************************/
-
   /*
    * Typography
    * ======================================================================== */
 
-  --font-family-base: 'Libre Franklin', 'Segoe UI', sans-serif;
+  --font-family-base: 'Libre Franklin', sans-serif;
 
   /*
    * Layout
@@ -47,4 +43,6 @@
   --Alto: #ddd;
   --Boulder: #757575;
   --Astronaut: #2d4373;
+  --Mercury: #e2e2e2;
+  --Green: #64b44b;
 }

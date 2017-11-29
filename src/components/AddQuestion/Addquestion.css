@@ -1,0 +1,32 @@
+@import '../variables.css';
+
+.quesTitle, .quesCategory {
+  width: 80%;
+  border-bottom: 1px solid var(--Mercury);
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.quesDesc {
+  margin-top: 40px;
+  width: 80%;
+  min-height: 120px;
+  border: 1px solid var(--Mercury);
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--Silver);
+  font-size: 14px;
+}
+
+.submit {
+  background: var(--Astronaut);
+  color: var(--White);
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  display: inherit;
+}

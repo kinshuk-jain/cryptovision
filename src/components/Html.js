@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import serialize from 'serialize-javascript';
 import config from '../config';
 
-/* eslint-disable react/no-danger */
+/* eslint-disable react/no-danger, prettier/prettier */
 
 class Html extends React.Component {
   static propTypes = {
@@ -46,6 +46,16 @@ class Html extends React.Component {
               dangerouslySetInnerHTML={{ __html: style.cssText }}
             />
           ))}
+          <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
+          <noscript>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600" />
+          </noscript>
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                `(function(){var ls;if(Storage!==undefined)ls=localStorage;if(ls&&ls.getItem('fonts'))return;var d=document,l=d.createElement('link'),now=new Date().getTime();var url='https://fonts.googleapis.com/css?family=Libre+Franklin:400,600';l.rel="stylesheet";l.crossorigin=true;l.href=url;d.head.appendChild(l);var i=d.createElement('img');i.onerror=function(){var fontLoadTime=new Date().getTime()-now;if(fontLoadTime>3000)d.head.removeChild();else ls&&ls.setItem('fonts', true);};i.src=url;})()`
+            }}
+          />
         </head>
         <body>
           <div id="app" dangerouslySetInnerHTML={{ __html: children }} />

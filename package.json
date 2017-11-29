@@ -6,7 +6,12 @@
     "node": ">=6.5",
     "npm": ">=3.10"
   },
-  "browserslist": [">1%", "last 4 versions", "Firefox ESR", "not ie < 9"],
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ],
   "dependencies": {
     "babel-polyfill": "7.0.0-beta.3",
     "babel-runtime": "^6.26.0",
@@ -21,14 +26,15 @@
     "isomorphic-style-loader": "^4.0.0",
     "jsonwebtoken": "^8.1.0",
     "lodash": "^4.17.4",
+    "memoizee": "^0.4.11",
     "node-fetch": "^1.7.3",
     "normalize.css": "^7.0.0",
     "pretty-error": "^2.1.1",
     "prop-types": "^15.5.10",
     "query-string": "^5.0.0",
-    "react": "^15.5.4",
+    "react": "^16.0.0",
     "react-dev-utils": "^4.1.0",
-    "react-dom": "^15.5.4",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.5",
     "redux": "^3.7.1",
     "redux-logger": "^3.0.6",
@@ -102,7 +108,7 @@
     "react-deep-force-update": "^2.0.1",
     "react-error-overlay": "^2.0.2",
     "react-hot-loader": "^3.0.0-beta.7",
-    "react-test-renderer": "^15.6.1",
+    "react-test-renderer": "16.0.0",
     "redux-mock-store": "^1.2.3",
     "rimraf": "^2.6.1",
     "sinon": "^3.2.0",
@@ -118,9 +124,18 @@
     "webpack-node-externals": "^1.6.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["eslint --fix", "git add"],
-    "*.{json,graphql}": ["prettier --write", "git add"],
-    "*.{css,less,styl,scss,sass,sss}": ["stylelint --fix", "git add"]
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,graphql}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{css,less,styl,scss,sass,sss}": [
+      "stylelint --fix",
+      "git add"
+    ]
   },
   "scripts": {
     "precommit": "lint-staged",

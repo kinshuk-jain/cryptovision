@@ -3,12 +3,18 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './PostCard.css';
 
 import UserOptions from '../UserOptions';
+import FlagOptions from '../FlagOptions';
 
 class PostCard extends React.Component {
   render() {
     return (
       <div className={s.container}>
-        <div className={s.question}> What is Bitcoin? </div>
+        <div className={s.questionContainer}>
+          <div className={s.question}>What is Bitcoin?</div>
+          <div className={s.flagpin}>
+            <FlagOptions />
+          </div>
+        </div>
         <div className={s.answerContainer}>
           <div className={s.voteContainer}>
             <div>0 Answers</div>

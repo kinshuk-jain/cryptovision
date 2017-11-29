@@ -8,6 +8,8 @@ import s from './Home.css';
 import PostCard from '../../components/PostCard';
 import SuggestedQues from '../../components/SuggestedQues';
 import CategoryNav from '../../components/CategoryNav';
+import AddQuestion from '../../components/AddQuestion';
+import NegativeFeedback from '../../components/NegativeFeedback';
 
 class Home extends React.Component {
   static propTypes = {
@@ -38,6 +40,8 @@ class Home extends React.Component {
             <SuggestedQues />
           </div>
         </div>
+        <AddQuestion />
+        <NegativeFeedback />
       </div>
     );
   }

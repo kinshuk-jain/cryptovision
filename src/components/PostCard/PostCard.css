@@ -1,7 +1,9 @@
+@import '../variables.css';
+
 .container {
   border-radius: 15px;
-  border: 1px solid var(--Gallery, #efefef);
-  background: var(--White, #fff);
+  border: 1px solid var(--Gallery);
+  background: var(--White);
   width: 100%;
   min-height: 200px;
   margin: 15px 0;
@@ -17,14 +19,28 @@
   box-shadow: 1px 1px #eee;
 }
 
-.question {
+.questionContainer {
   font-weight: 600;
   margin: 0 auto;
   padding-bottom: 15px;
   width: 100%;
-  border-bottom: 1px solid var(--Gallery, #efefef);
+  border-bottom: 1px solid var(--Gallery);
+}
+
+.question {
+  width: 92%;
+  padding-right: 10px;
+  display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.flagpin {
+  width: 7%;
+  display: inline-block;
+  position: relative;
+  right: -20px;
+  cursor: pointer;
 }
 
 .answerContainer {

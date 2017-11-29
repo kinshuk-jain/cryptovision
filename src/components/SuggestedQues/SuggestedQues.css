@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .container {
   background: #fff;
   border-radius: 15px;

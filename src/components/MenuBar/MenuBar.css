@@ -1,0 +1,56 @@
+@import '../variables.css';
+
+.root {
+  display: inline-block;
+  position: relative;
+  top: 20px;
+  left: -25px;
+}
+
+.root i {
+  cursor: pointer;
+}
+
+.root:hover .menu {
+  display: block;
+}
+
+.menu {
+  z-index: 99;
+  position: absolute;
+  top: -6px;
+  left: -7px;
+  width: 200px;
+  margin: 0;
+  background: var(--White);
+  display: none;
+  list-style: none;
+  padding: 0;
+  background: var(--White);
+  box-shadow: 1px 2px 4px var(--Silver);
+}
+
+.menu li {
+  padding: 5px;
+  text-align: center;
+}
+
+.menu li:hover:not(.categoryTitle) {
+  color: var(--Lochmara);
+  background: var(--Alabaster);
+  cursor: pointer;
+}
+
+.categoryTitle i {
+  position: relative;
+  left: -44px;
+}
+
+.categoryTitle {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--Gallery);
+}
+
+.categoryTitle span {
+  color: var(--Lochmara);
+}

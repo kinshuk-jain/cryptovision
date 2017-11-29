@@ -1,9 +1,11 @@
 
+@import '../variables.css';
+
 .userOptions {
   width: 100%;
   margin-top: 10px;
   font-size: 14px;
-  border-top: 1px solid var(--Gallery, #efefef);
+  border-top: 1px solid var(--Gallery);
   list-style: none;
   padding: 0;
   padding-top: 10px;
@@ -14,12 +16,12 @@
 .userOptions li {
   display: inline-block;
   width: 25%;
-  border-right: 1px solid var(--Trout, #4c505d);
+  border-right: 1px solid var(--Trout);
 }
 
 .userOptions li:hover {
   cursor: pointer;
-  color: var(--Black, #000);
+  color: var(--Black);
 }
 
 .userOptions li:last-child {

@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .container {
   width: 100%;
   background: var(--PictonBlue, #3e95f2);

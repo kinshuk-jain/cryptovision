@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .header {
   position: relative;
   width: 100%;
@@ -12,7 +14,7 @@
 
 .logoInfo {
   position: relative;
-  top: 15px;
+  top: 20px;
   cursor: pointer;
   margin-right: 3%;
   outline: none;
@@ -28,7 +30,7 @@
   border-radius: 5px;
   margin-left: 10px;
   position: relative;
-  top: 15px;
+  top: 20px;
   float: right;
 }
 

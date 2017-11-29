@@ -8,13 +8,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/server';
 import PrettyError from 'pretty-error';
 import App from './components/App';
-import Html from './components/Html';
+// import Html from '../src/components/Html';
 import createFetch from './createFetch';
 import router from './router';
 import assets from './assets.json'; // eslint-disable-line import/no-unresolved
 import configureStore from './store/configureStore';
 import { setRuntimeVariable } from './actions/runtime';
 import config from './config';
+import cached from './cached';
 
 const app = express();
 
@@ -138,9 +139,10 @@ app.get('*', async (req, res, next) => {
       state: context.store.getState(),
     };
 
-    const html = ReactDOM.renderToStaticMarkup(<Html {...data} />);
+    // const html = ReactDOM.renderToStaticMarkup(<Html {...data} />);
+    const cachedHTML = cached(req.path, data);
     res.status(route.status || 200);
-    res.send(`<!doctype html>${html}`);
+    res.send(`<!doctype html>${cachedHTML}`);
   } catch (err) {
     next(err);
   }

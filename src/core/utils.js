@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-expressions */
+
+import _ from 'lodash';
+
 export const disableBodyScrolling = (condition, avoidFixed) => {
   if (condition) {
     document.body.style.overflow = 'hidden';
@@ -15,4 +19,27 @@ export function escapeHTML(str) {
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/"/g, '&quot;');
+}
+
+export function addRemoveScrollEventListener(fn, remove = false) {
+  // detect if passive event listers are supported
+  let supportPassive = false;
+  try {
+    const opts = Object.defineProperty({}, 'passive', {
+      get: () => {
+        supportPassive = true;
+        return true;
+      },
+    });
+    window.addEventListener('dummy', null, opts);
+    window.removeEventListener('dummy', null, opts);
+  } catch (err) {
+    /* do nothing */
+  }
+  // attach event listener
+  const scrollCB = _.throttle(fn, 200);
+  const options = supportPassive ? { capture: true, passive: true } : true;
+  remove
+    ? window.removeEventListener('scroll', scrollCB, options)
+    : window.addEventListener('scroll', scrollCB, options);
 }

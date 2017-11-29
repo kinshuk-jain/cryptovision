@@ -8,12 +8,24 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-
+  
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+  
+  .icon-ok:before {
+    content: "\f00c";
+  }
+  .icon-remove_sign:before {
+    content: "\f057";
+  }
+  .icon-ok_sign:before {
+    content: "\f058";
+  }
+  .icon-ellipsis_vertical:before {
+    content: "\f142";
+  }
   .icon-BCH-alt:before {
     content: "\e905";
   }
@@ -32,14 +44,14 @@
   .icon-GLD:before {
     content: "\e90a";
   }
+  .icon-LTC-alt:before {
+    content: "\e902";
+  }
   .icon-OMG:before {
     content: "\e90b";
   }
   .icon-XRP-alt:before {
     content: "\e90c";
-  }
-  .icon-check-circle:before {
-    content: "\65";
   }
   .icon-bars:before {
     content: "\67";
@@ -52,9 +64,6 @@
   }
   .icon-share:before {
     content: "\6d";
-  }
-  .icon-question:before {
-    content: "\6f";
   }
   .icon-arrow-down:before {
     content: "\f03f";
@@ -83,6 +92,9 @@
   .icon-mail:before {
     content: "\f03b";
   }
+  .icon-pin:before {
+    content: "\f041";
+  }
   .icon-x:before {
     content: "\f081";
   }
@@ -95,14 +107,8 @@
   .icon-flag2:before {
     content: "\e901";
   }
-  .icon-bookmark:before {
-    content: "\e902";
-  }
-  .icon-bookmark2:before {
-    content: "\e903";
-  }
   .icon-search:before {
     content: "\e904";
-  }
+  }  
 }
   

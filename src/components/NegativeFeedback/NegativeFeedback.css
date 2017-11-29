@@ -1,0 +1,66 @@
+@import '../variables.css';
+
+.negativeFeedback {
+  position: relative;
+  top: 5%;
+}
+
+.negativeFeedback form {
+  padding: 20px 0;
+}
+
+.feedbackRow {
+  width: 400px;
+  height: 150px;
+}
+
+.label {
+  font-size: 14px;
+  padding: 10px 0;
+  color: var(--Astronaut);
+  font-weight: 600;
+}
+
+select {
+  border: none;
+  background: var(--Alabaster);
+  border-radius: 0;
+  border-bottom: 1px solid var(--Trout);
+  outline: none;
+  padding: 5px;
+}
+
+.modalTitle {
+  padding-bottom: 20px;
+}
+
+.submit {
+  background: var(--Astronaut);
+  color: var(--White);
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.textareaContainer {
+  position: relative;
+}
+
+.wordCount {
+  position: absolute;
+  top: 85%;
+  right: 27%;
+  font-size: 10px;
+  color: var(--Silver);
+}
+
+.error {
+  font-size: 12px;
+  padding-top: 5px;
+  color: var(--Flamingo);
+}
+
+.successSubmit i {
+  color: var(--Green);
+}

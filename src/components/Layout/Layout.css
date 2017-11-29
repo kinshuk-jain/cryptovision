@@ -1,4 +1,5 @@
 @import '../../commonStyles/customFont.css';
+@import '../variables.css';
 
 /*
  * normalize.css is imported in JS file.
@@ -11,10 +12,10 @@
  * ========================================================================== */
 
 html {
-  color: var(--Trout, #4c505d);
+  color: var(--Trout);
   font-weight: 400;
   font-size: 1em; /* ~16px; */
-  font-family: var(--font-family-base, sans-serif);
+  font-family: var(--font-family-base);
   box-sizing: border-box;
   line-height: 1.375; /* ~22px */
 }
@@ -22,7 +23,7 @@ html {
 body {
   margin: 0;
   width: 100%;
-  background: var(--Alabaster, #fafafa);
+  background: var(--Alabaster);
 }
 
 *, *:before, *:after {
@@ -30,7 +31,7 @@ body {
 }
 
 a {
-  color: var(--Lochmara, #0074c2);
+  color: var(--Lochmara);
 }
 
 /*
@@ -42,12 +43,12 @@ a {
  */
 
 ::-moz-selection {
-  background: var(--Sail, #b3d4fc);
+  background: var(--Sail);
   text-shadow: none;
 }
 
 ::selection {
-  background: var(--Sail, #b3d4fc);
+  background: var(--Sail);
   text-shadow: none;
 }
 
@@ -59,7 +60,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid var(--Silver, #ccc);
+  border-top: 1px solid var(--Silver);
   margin: 1em 0;
   padding: 0;
 }
@@ -93,8 +94,8 @@ textarea {
 
 :global(.browserupgrade) {
   margin: 0.2em 0;
-  background: var(--Silver, #ccc);
-  color: var(--Black, #000);
+  background: var(--Silver);
+  color: var(--Black);
   padding: 0.2em 0;
 }
 
@@ -109,7 +110,7 @@ textarea {
   *::before,
   *::after {
     background: transparent !important;
-    color: var(--Black, #000) !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    color: var(--Black) !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -139,7 +140,7 @@ textarea {
 
   pre,
   blockquote {
-    border: 1px solid var(--DustyGray, #999);
+    border: 1px solid var(--DustyGray);
     page-break-inside: avoid;
   }
 
@@ -176,7 +177,6 @@ textarea {
 
 .pageContainer {
   min-width: 1024px;
-  box-sizing: border-box;
 }
 
 .topBarContainer {
@@ -193,4 +193,18 @@ textarea {
 
 .addTopBarHeight {
   top: 110px;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--White);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
 }

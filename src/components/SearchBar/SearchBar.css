@@ -1,3 +1,5 @@
+@import '../variables.css';
+
 .searchBar {
   width: 50%;
   padding: 6px 0 0;
@@ -6,26 +8,26 @@
   position: relative;
   transform: translateY(-50%);
   border-radius: 2px;
-  border: 1px solid var(--Gallery, #efefef);
+  border: 1px solid var(--Gallery);
 }
 
 .searchBar i {
-  width: 20px;
-  color: var(--Trout, #4c505d);
-  height: 20px;
+  width: 18px;
+  color: var(--Trout);
   position: relative;
-  top: 4px;
+  display: inline-block;
+  top: 2px;
   left: 10px;
   font-size: 18px;
   font-weight: 600;
 }
 
 input {
-  width: 97%;
-  font-size: 1.3rem;
+  width: 95%;
+  font-size: 1.1rem;
   font-weight: 500;
   padding: 0 8px 8px 33px;
-  color: var(--Trout, #4c505d);
+  color: var(--Trout);
   border: none;
   background-color: transparent;
 }
