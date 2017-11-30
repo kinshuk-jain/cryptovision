@@ -20,14 +20,14 @@
   --screen-md-min: 992px;  /* Medium screen / desktop */
   --screen-lg-min: 1200px; /* Large screen / wide desktop */
 
-   /*
+  /*
    * Colors
    * ======================================================================== */
 
   --Gallery: #efefef;
   --WildSand: #f5f5f5;
   --Flamingo: #ef4e28;
-  --Trout: #4C505D;
+  --Trout: #4c505d;
   --White: #fff;
   --MineShaft: #333;
   --Alabaster: #fafafa;

@@ -12,6 +12,7 @@
 .feedbackRow {
   width: 400px;
   height: 150px;
+  outline: none;
 }
 
 .label {
@@ -23,7 +24,7 @@
 
 select {
   border: none;
-  background: var(--Alabaster);
+  background: var(--Gallery);
   border-radius: 0;
   border-bottom: 1px solid var(--Trout);
   outline: none;

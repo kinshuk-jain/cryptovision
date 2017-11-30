@@ -3,13 +3,13 @@
 
 .userOptions {
   width: 100%;
+  margin: 0;
   margin-top: 10px;
   font-size: 14px;
   border-top: 1px solid var(--Gallery);
   list-style: none;
   padding: 0;
   padding-top: 10px;
-  margin: 0;
   color: var(--Trout, #4c505d);
 }
 

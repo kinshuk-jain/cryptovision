@@ -1,3 +1,5 @@
+/* stylelint-disable */
+
 :global {
   [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */

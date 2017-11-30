@@ -2,8 +2,9 @@
 
 @font-face {
   font-family: 'kyc';
-  src:  url('fonts/kyc.woff?ctv8gi');
-  src:  url('fonts/kyc.eot?ctv8gi#iefix') format('embedded-opentype'),
+  src: url('fonts/kyc.woff?ctv8gi');
+  src:
+    url('fonts/kyc.eot?ctv8gi#iefix') format('embedded-opentype'),
     url('fonts/kyc.ttf?ctv8gi') format('truetype'),
     url('fonts/kyc.woff?ctv8gi') format('woff'),
     url('fonts/kyc.svg?ctv8gi#kyc') format('svg');
