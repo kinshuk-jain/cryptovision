@@ -1,12 +1,3 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 // ESLint configuration
 // http://eslint.org/docs/user-guide/configuring
 module.exports = {
@@ -76,9 +67,10 @@ module.exports = {
       },
     ],
 
-    // No need to force key events for click events
-    'jsx-ally/click-events-have-key-events': 'off',
+    // No need to force key events for mouse events
+    'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/mouse-events-have-key-events': 'off',
 
     // allow array indices to be used in keys
     'react/no-array-index-key': 'off',

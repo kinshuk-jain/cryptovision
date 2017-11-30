@@ -43,3 +43,55 @@ export function addRemoveScrollEventListener(fn, remove = false) {
     ? window.removeEventListener('scroll', scrollCB, options)
     : window.addEventListener('scroll', scrollCB, options);
 }
+
+// raf shim
+export const requestAnimFrame = (() => {
+  if (!process.env.BROWSER) return () => ({});
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    (callback => setTimeout(callback, 1000 / 60))
+  );
+})();
+
+export function scrollToTop(speed = 2000, easing = 'easeInOutQuint') {
+  const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  let currentTime = 0;
+
+  // min time 0.1, max time 0.8 seconds
+  const time = Math.max(0.1, Math.min(scrollY / speed, 0.8));
+
+  // copied from https://github.com/danro/easing-js/blob/master/easing.js
+  const easingEquations = {
+    easeOutSine(pos) {
+      return Math.sin(pos * (Math.PI / 2));
+    },
+    easeInOutSine(pos) {
+      return -0.5 * (Math.cos(Math.PI * pos) - 1);
+    },
+    easeInOutQuint(pos) {
+      pos /= 0.5; // eslint-disable-line
+      return pos < 1 ? 0.5 * pos ** 5 : 0.5 * ((pos - 2) ** 5 + 2);
+    },
+  };
+
+  // add animation loop
+  function tick() {
+    // frame number
+    currentTime += 1 / 60;
+    // position in anim frame is (scrollY*currentTime/time)
+    const p = currentTime / time;
+    // do not multiply by scrollY yet as we need to add easing to position
+    const t = easingEquations[easing](p);
+
+    if (p < 1) {
+      requestAnimFrame(tick);
+      window.scrollTo(0, scrollY - scrollY * t);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }
+  // call it once to get started
+  tick();
+}

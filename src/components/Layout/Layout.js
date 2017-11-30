@@ -14,7 +14,7 @@ import TopBar from '../TopBar';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
 
-import { addRemoveScrollEventListener } from '../../core/utils';
+import { addRemoveScrollEventListener, scrollToTop } from '../../core/utils';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -58,7 +58,7 @@ class Layout extends React.Component {
           <div
             className={s.scrollToTop}
             onClick={() => {
-              window.scrollTo(0, 0);
+              scrollToTop(1500);
             }}
           >
             <i className="icon-chevron-up" />

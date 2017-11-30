@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -31,11 +33,27 @@ class FlagOptions extends React.Component {
       >
         <i className="icon-ellipsis_vertical" />
         {showHover ? (
-          <ul className={s.flagPin}>
-            <li onClick={() => this.props.showFeedbackModal(true)}>
+          <ul
+            className={s.flagPin}
+            onClick={e => {
+              const li = e.target && e.target.closest('li');
+              if (li) {
+                switch (li.id) {
+                  case 'flag':
+                    this.props.showFeedbackModal(true);
+                    return;
+                  case 'pin':
+                    return;
+                  default:
+                    console.error('Invalid Id'); // eslint-disable-line
+                }
+              }
+            }}
+          >
+            <li id="flag">
               <i className="icon-flag" />Flag
             </li>
-            <li>
+            <li id="pin">
               <i className="icon-pin" /> Pin
             </li>
           </ul>

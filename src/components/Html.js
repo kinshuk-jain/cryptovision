@@ -47,9 +47,6 @@ class Html extends React.Component {
             />
           ))}
           <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="true" />
-          <noscript>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,600" />
-          </noscript>
           <script
             dangerouslySetInnerHTML={{
               __html:
