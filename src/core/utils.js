@@ -18,7 +18,8 @@ export function escapeHTML(str) {
   return str
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
-    .replace(/"/g, '&quot;');
+    .replace(/("|')/g, '&quot;')
+    .replace(/\{/g, '&lbrac;');
 }
 
 export function addRemoveScrollEventListener(fn, remove = false) {
@@ -94,4 +95,36 @@ export function scrollToTop(speed = 2000, easing = 'easeInOutQuint') {
   }
   // call it once to get started
   tick();
+}
+
+function checkIFLSAvailable() {
+  return process.env.BROWSER && typeof Storage !== 'undefined' && localStorage;
+}
+
+export function addItemToLS(key, value) {
+  if (checkIFLSAvailable && typeof key === 'string') {
+    localStorage.setItem(key, value);
+    return true;
+  }
+  return false;
+}
+
+export function getItemFromLS(key) {
+  if (checkIFLSAvailable && typeof key === 'string') {
+    return localStorage.getItem(key);
+  }
+  return null;
+}
+
+export function fetchAndParseLSItem(key) {
+  const value = getItemFromLS(key);
+  if (value) {
+    try {
+      // try-catch needed because JSON.parse will break when JSON is invalid
+      return JSON.parse(value);
+    } catch (e) {
+      return null;
+    }
+  }
+  return null;
 }

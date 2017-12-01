@@ -6,15 +6,9 @@
     "node": ">=6.5",
     "npm": ">=3.10"
   },
-  "browserslist": [
-    ">1%",
-    "last 4 versions",
-    "Firefox ESR",
-    "not ie < 9"
-  ],
+  "browserslist": [">1%", "last 4 versions", "Firefox ESR", "not ie < 9"],
   "dependencies": {
     "babel-polyfill": "7.0.0-beta.3",
-    "babel-runtime": "^6.26.0",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "classnames": "^2.2.5",
@@ -46,6 +40,7 @@
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",
+    "babel-runtime": "^6.26.0",
     "autoprefixer": "^7.1.6",
     "babel-core": "7.0.0-beta.3",
     "babel-eslint": "^8.0.1",
@@ -61,6 +56,7 @@
     "babel-preset-stage-2": "7.0.0-beta.3",
     "browser-sync": "^2.18.13",
     "chokidar": "^1.7.0",
+    "core-js": "^2.5.1",
     "css-loader": "^0.28.7",
     "enzyme": "^3.1.0",
     "eslint": "^4.9.0",
@@ -124,18 +120,9 @@
     "webpack-node-externals": "^1.6.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{json,graphql}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{css,less,styl,scss,sass,sss}": [
-      "stylelint --fix",
-      "git add"
-    ]
+    "*.{js,jsx}": ["eslint --fix", "git add"],
+    "*.{json,graphql}": ["prettier --write", "git add"],
+    "*.{css,less,styl,scss,sass,sss}": ["stylelint --fix", "git add"]
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -153,7 +140,7 @@
     "clean": "babel-node tools/run clean",
     "copy": "babel-node tools/run copy",
     "bundle": "babel-node tools/run bundle",
-    "build": "babel-node tools/run build",
+    "build": "NODE_ENV=production babel-node tools/run build",
     "build-stats": "yarn run build --release --analyse",
     "deploy": "cp -R build/* functions/server/ && firebase deploy",
     "render": "babel-node tools/run render",

@@ -66,6 +66,7 @@ module.exports = {
         aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
     ],
+    'class-methods-use-this': 'off',
 
     // No need to force key events for mouse events
     'jsx-a11y/click-events-have-key-events': 'off',

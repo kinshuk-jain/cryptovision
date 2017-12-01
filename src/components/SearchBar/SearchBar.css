@@ -36,6 +36,40 @@
   outline: none;
 }
 
+.suggestedSearch {
+  background: var(--White);
+  position: absolute;
+  z-index: 99;
+  margin-top: 5px;
+  color: var(--Black);
+  width: 100%;
+  left: 0;
+  padding: 11px;
+  box-shadow: 0 2px 2px var(--Silver);
+}
+
+.suggestedSearch ul {
+  padding-left: 0;
+}
+
+.suggestedSearch ul li {
+  margin: 0 0 0 30px;
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 3px 0;
+  cursor: pointer;
+}
+
+.popProd {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 7px 0;
+  color: var(--Astronaut);
+}
+
 @media (max-width: 1200px) {
   .searchBar {
     width: 43%;
