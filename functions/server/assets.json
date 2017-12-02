@@ -1,11 +1,11 @@
 {
   "home": {
-    "js": "/assets/home.dc98df7c.chunk.js"
+    "js": "/assets/home.351a761c.chunk.js"
   },
   "client": {
-    "js": "/assets/client.85ee991a.js"
+    "js": "/assets/client.a17f9ef0.js"
   },
   "vendor": {
-    "js": "/assets/vendor.a333c805.js"
+    "js": "/assets/vendor.7b88c105.js"
   }
 }
