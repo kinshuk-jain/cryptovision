@@ -10,107 +10,141 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   .icon-ok:before {
     content: "\f00c";
   }
+
   .icon-remove_sign:before {
     content: "\f057";
   }
+
   .icon-ok_sign:before {
     content: "\f058";
   }
+
+  .icon-minus:before {
+    content: "\f068";
+  }
+
   .icon-ellipsis_vertical:before {
     content: "\f142";
   }
+
   .icon-BCH-alt:before {
     content: "\e905";
   }
+
   .icon-BTC-alt:before {
     content: "\e906";
   }
+
   .icon-BTCD-alt:before {
     content: "\e907";
   }
+
   .icon-DASH-alt:before {
     content: "\e908";
   }
+
   .icon-ETC:before {
     content: "\e909";
   }
+
   .icon-GLD:before {
     content: "\e90a";
   }
+
   .icon-LTC-alt:before {
     content: "\e902";
   }
+
   .icon-OMG:before {
     content: "\e90b";
   }
+
   .icon-XRP-alt:before {
     content: "\e90c";
   }
+
   .icon-bars:before {
     content: "\67";
   }
+
   .icon-bubble:before {
     content: "\6b";
   }
+
   .icon-reload:before {
     content: "\6c";
   }
+
   .icon-share:before {
     content: "\6d";
   }
+
   .icon-arrow-down:before {
     content: "\f03f";
   }
+
   .icon-arrow-small-down:before {
     content: "\f0a0";
   }
+
   .icon-arrow-small-up:before {
     content: "\f09f";
   }
+
   .icon-arrow-up:before {
     content: "\f03d";
   }
+
   .icon-chevron-down:before {
     content: "\f0a3";
   }
+
   .icon-chevron-left:before {
     content: "\f0a4";
   }
+
   .icon-chevron-right:before {
     content: "\f078";
   }
+
   .icon-chevron-up:before {
     content: "\f0a2";
   }
+
   .icon-mail:before {
     content: "\f03b";
   }
+
   .icon-pin:before {
     content: "\f041";
   }
+
   .icon-x:before {
     content: "\f081";
   }
+
   .icon-image:before {
     content: "\e90d";
   }
+
+  .icon-arrow-up-left2:before {
+    content: "\ea39";
+  }
+
   .icon-flag:before {
     content: "\e900";
   }
-  .icon-flag2:before {
-    content: "\e901";
-  }
+
   .icon-search:before {
     content: "\e904";
-  }  
+  }
 }
-  

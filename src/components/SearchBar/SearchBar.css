@@ -52,14 +52,36 @@
   padding-left: 0;
 }
 
-.suggestedSearch ul li {
-  margin: 0 0 0 30px;
+.searchItem {
+  margin: 0;
   display: block;
   font-size: 12px;
   line-height: 18px;
   overflow: hidden;
-  padding: 3px 0;
+  padding: 3px 0 3px 20px;
   cursor: pointer;
+}
+
+.searchItem span,
+.searchSuggestion {
+  display: inline-block;
+  width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchSuggestion {
+  width: 100%;
+}
+
+.searchItem i {
+  font-size: 12px;
+  text-align: right;
+  color: var(--Astronaut);
+}
+
+.searchItem:hover {
+  background: var(--Sail);
 }
 
 .popProd {
@@ -68,6 +90,10 @@
   line-height: 1;
   padding: 7px 0;
   color: var(--Astronaut);
+}
+
+.active {
+  background: var(--Sail);
 }
 
 @media (max-width: 1200px) {

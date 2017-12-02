@@ -7,10 +7,14 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './FlagOptions.css';
 
 import { showFeedbackModal } from '../../actions/feedbackAction';
+import { addToPinBar } from '../../actions/pinBarActions';
 
 class FlagOptions extends React.Component {
   static propTypes = {
     showFeedbackModal: PropTypes.func.isRequired,
+    addToPinBar: PropTypes.func.isRequired,
+    postId: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   state = {
@@ -43,6 +47,10 @@ class FlagOptions extends React.Component {
                     this.props.showFeedbackModal(true);
                     return;
                   case 'pin':
+                    this.props.addToPinBar({
+                      postId: this.props.postId,
+                      title: this.props.title,
+                    });
                     return;
                   default:
                     console.error('Invalid Id'); // eslint-disable-line
@@ -66,5 +74,6 @@ class FlagOptions extends React.Component {
 export default withStyles(s)(
   connect(null, dispatch => ({
     showFeedbackModal: payload => dispatch(showFeedbackModal(payload)),
+    addToPinBar: payload => dispatch(addToPinBar(payload)),
   }))(FlagOptions),
 );

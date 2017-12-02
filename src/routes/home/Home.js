@@ -10,6 +10,7 @@ import SuggestedQues from '../../components/SuggestedQues';
 import CategoryNav from '../../components/CategoryNav';
 import AddQuestion from '../../components/AddQuestion';
 import NegativeFeedback from '../../components/NegativeFeedback';
+import PinBar from '../../components/PinBar';
 
 class Home extends React.Component {
   static propTypes = {
@@ -42,6 +43,7 @@ class Home extends React.Component {
         </div>
         <AddQuestion />
         <NegativeFeedback />
+        <PinBar />
       </div>
     );
   }

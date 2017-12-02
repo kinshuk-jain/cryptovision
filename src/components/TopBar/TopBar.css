@@ -2,9 +2,8 @@
 
 .container {
   width: 100%;
-  background: var(--PictonBlue, #3e95f2);
-  color: var(--White, #fff);
-  height: 26px;
+  background: var(--PictonBlue);
+  color: var(--White);
   padding: 5px 4%;
 }
 

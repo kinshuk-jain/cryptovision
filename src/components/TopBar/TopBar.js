@@ -15,7 +15,9 @@ class TopBar extends React.Component {
     const { hideTopBar } = this.props;
     return !hideTopBar ? (
       <div className={s.container}>
-        Notification type message if any
+        For pages with infinite scrolling, what we do will go here along with
+        any notifications we might need. For others we will have a footer with
+        About section
         <div className={s.cross} onClick={() => this.props.closeTopBar(true)}>
           <i className="icon-x" />
         </div>
