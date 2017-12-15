@@ -1,0 +1,38 @@
+@import '../../components/variables.css';
+
+.leftContainer {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 20px;
+  margin-left: 5%;
+  width: 70%;
+  background: var(--White);
+  border-radius: 10px;
+}
+
+.rightContainer {
+  display: inline-block;
+  width: 25%;
+  padding: 10px;
+}
+
+hr {
+  margin-top: -10px;
+}
+
+.comments {
+  background: var(--WildSand);
+}
+
+.comments .userComment {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--Mercury);
+}
+
+.comments .userComment:last-child {
+  border: none;
+}
+
+.comments .userComment:hover {
+  background: var(--Gallery);
+}

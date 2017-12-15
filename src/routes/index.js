@@ -11,22 +11,27 @@ const routes = {
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
     {
-      path: '/login',
-      load: () => import('./login'),
+      path: '/question/:quesId',
+      load: () =>
+        import(/* webpackChunkName: 'questionPage' */ './questionPage'),
     },
-    {
-      path: '/register',
-      load: () => import('./register'),
-    },
-    {
-      path: '/about',
-      load: () => import('./about'),
-    },
+    // {
+    //   path: '/login',
+    //   load: () => import(/* webpackChunkName: 'login' */ './login'),
+    // },
+    // {
+    //   path: '/register',
+    //   load: () => import(/* webpackChunkName: 'register' */ './register'),
+    // },
+    // {
+    //   path: '/about',
+    //   load: () => import(/* webpackChunkName: 'about' */ './about'),
+    // },
 
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
     {
       path: '(.*)',
-      load: () => import('./not-found'),
+      load: () => import(/* webpackChunkName: 'not-found' */ './not-found'),
     },
   ],
 

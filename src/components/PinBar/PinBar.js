@@ -52,7 +52,10 @@ class PinBar extends Component {
               <i className="icon-minus" />
               <i
                 className="icon-x"
-                onClick={() => this.props.addToPinBar({ postId: key, title })}
+                onClick={e => {
+                  e.preventDefault();
+                  this.props.addToPinBar({ postId: key, title });
+                }}
               />
             </div>
           );

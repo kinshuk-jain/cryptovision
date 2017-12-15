@@ -12,7 +12,10 @@ class PostCard extends React.Component {
         <div className={s.questionContainer}>
           <div className={s.question}>What is Bitcoin?</div>
           <div className={s.flagpin}>
-            <FlagOptions postId="1231231" title="what is bitcoin?" />
+            <FlagOptions
+              postId={`${Math.random()}1231231`}
+              title="what is bitcoin?"
+            />
           </div>
         </div>
         <div className={s.answerContainer}>

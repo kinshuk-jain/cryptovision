@@ -11,9 +11,6 @@ import normalizeCss from 'normalize.css';
 import s from './Layout.css';
 import Header from '../Header';
 import TopBar from '../TopBar';
-import Feedback from '../Feedback';
-import Footer from '../Footer';
-
 import { addRemoveScrollEventListener, scrollToTop } from '../../core/utils';
 
 class Layout extends React.Component {
@@ -51,8 +48,6 @@ class Layout extends React.Component {
         </div>
         <div className={cx(s.child, { [s.addTopBarHeight]: !hideTopBar })}>
           {this.props.children}
-          <Feedback />
-          <Footer />
         </div>
         {this.state.showScrollToTop && (
           <div

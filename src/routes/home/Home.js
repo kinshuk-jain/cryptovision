@@ -21,11 +21,54 @@ class Home extends React.Component {
     showSidebar: true,
   };
 
+  state = {
+    show: false,
+    sortFilter: 'popular',
+  };
+
+  mouseInOut(state) {
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(() => this.setState({ show: state }), 200);
+  }
+
+  renderSortBy() {
+    return (
+      <div className={s.sortContainer}>
+        <div
+          className={s.subHeader}
+          onMouseEnter={() => this.mouseInOut(true)}
+          onMouseLeave={() => this.mouseInOut(false)}
+        >
+          Sort by {`${this.state.sortFilter}`}
+          <i
+            className={cx('icon-chevron-down', { [s.rotate]: this.state.show })}
+          />
+          {this.state.show && (
+            <div className={s.sortDropDown}>
+              {['currency', 'latest', 'popular'].map((key, i) => (
+                <div
+                  key={i}
+                  onClick={() => {
+                    this.setState({ sortFilter: key });
+                    this.mouseInOut(false);
+                  }}
+                >
+                  {key}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
           <h1 className={s.title}>Q & A</h1>
+          {this.renderSortBy()}
           <div
             className={cx(s.left, { [s.smallLeft]: !this.props.showSidebar })}
           >
