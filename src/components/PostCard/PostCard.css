@@ -33,6 +33,11 @@
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.question:hover {
+  color: var(--Black);
 }
 
 .flagpin {
