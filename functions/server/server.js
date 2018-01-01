@@ -7,7 +7,7 @@ module.exports =
 /******/ 	// object to store loaded chunks
 /******/ 	// "0" means "already loaded"
 /******/ 	var installedChunks = {
-/******/ 		5: 0
+/******/ 		3: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -39,7 +39,7 @@ module.exports =
 /******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./chunks/" + ({"0":"home"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./chunks/" + ({"0":"home","1":"questionPage","2":"not-found"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -1018,25 +1018,27 @@ var routes = {
       return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 55));
     }
   }, {
-    path: '/login',
+    path: '/question/:quesId',
     load: function load() {
-      return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, 56));
+      return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 56));
     }
-  }, {
-    path: '/register',
-    load: function load() {
-      return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 57));
-    }
-  }, {
-    path: '/about',
-    load: function load() {
-      return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 58));
-    }
-  }, // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
+  }, // {
+  //   path: '/login',
+  //   load: () => import(/* webpackChunkName: 'login' */ './login'),
+  // },
+  // {
+  //   path: '/register',
+  //   load: () => import(/* webpackChunkName: 'register' */ './register'),
+  // },
+  // {
+  //   path: '/about',
+  //   load: () => import(/* webpackChunkName: 'about' */ './about'),
+  // },
+  // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
   {
     path: '(.*)',
     load: function load() {
-      return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, 59));
+      return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, 57));
     }
   }],
   action: function () {

@@ -1,21 +1,27 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './PostCard.css';
+import history from '../../history';
 
 import UserOptions from '../UserOptions';
 import FlagOptions from '../FlagOptions';
 
 class PostCard extends React.Component {
   render() {
+    const postId = `${Math.random()}1231231`;
     return (
       <div className={s.container}>
         <div className={s.questionContainer}>
-          <div className={s.question}>What is Bitcoin?</div>
+          <div
+            className={s.question}
+            onClick={() => {
+              history.push(`/question/${postId}`);
+            }}
+          >
+            What is Bitcoin?
+          </div>
           <div className={s.flagpin}>
-            <FlagOptions
-              postId={`${Math.random()}1231231`}
-              title="what is bitcoin?"
-            />
+            <FlagOptions postId={postId} title="what is bitcoin?" />
           </div>
         </div>
         <div className={s.answerContainer}>

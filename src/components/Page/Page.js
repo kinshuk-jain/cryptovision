@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Page.css';
 
+// For static pages. Just need to pass the html and the title
 class Page extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,

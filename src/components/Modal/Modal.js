@@ -80,7 +80,7 @@ Modal.defaultProps = {
   overlay: true,
   showCross: true,
   closeFn: () => {},
-  overflow: 'scroll',
+  overflow: 'auto',
   top: 20,
   isFull: false,
   height: 60,

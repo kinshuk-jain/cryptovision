@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import Page from '../../components/Page';
 import about from './about.md';
+import Footer from '../../components/Footer';
 
 function action() {
   return {
@@ -10,6 +11,7 @@ function action() {
     component: (
       <Layout>
         <Page {...about} />
+        <Footer />
       </Layout>
     ),
   };

@@ -1,5 +1,9 @@
 @import '../../components/variables.css';
 
+.quesContainer {
+  min-height: 75vh;
+}
+
 .leftContainer {
   display: inline-block;
   vertical-align: top;
@@ -13,26 +17,22 @@
 .rightContainer {
   display: inline-block;
   width: 25%;
-  padding: 10px;
+  padding: 0 10px 10px;
 }
 
-hr {
-  margin-top: -10px;
+.options {
+  margin: -10px 0;
 }
 
-.comments {
-  background: var(--WildSand);
+.quesStats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.comments .userComment {
-  padding: 10px 15px;
-  border-bottom: 1px solid var(--Mercury);
-}
-
-.comments .userComment:last-child {
-  border: none;
-}
-
-.comments .userComment:hover {
-  background: var(--Gallery);
+.quesStats li {
+  display: inline;
+  margin-left: 15px;
+  font-size: 13px;
+  color: var(--Boulder);
 }

@@ -2,45 +2,19 @@
 title: About Us
 component: ContentPage
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat
-tortor fermentum mi fermentum dignissim. Nullam vel ipsum ut ligula elementum
-lobortis. Maecenas aliquam, massa laoreet lacinia pretium, nisi urna venenatis
-tortor, nec imperdiet tellus libero efficitur metus. Fusce semper posuere
-ligula, et facilisis metus bibendum interdum. Mauris at mauris sit amet sem
-pharetra commodo a eu leo. Nam at est non risus cursus maximus. Nam feugiat
-augue libero, id consectetur tortor bibendum non. Quisque nec fringilla lorem.
-Nullam efficitur vulputate mauris, nec maximus leo dignissim id.
-
-In hac habitasse platea dictumst. Duis sagittis dui ac ex suscipit maximus.
-Morbi pellentesque venenatis felis sed convallis. Nulla varius, nibh vitae
-placerat tempus, mauris sem elementum ipsum, eget sollicitudin nisl est vel
-purus. Fusce malesuada odio velit, non cursus leo fermentum id. Cras pharetra
-sodales fringilla. Etiam quis est a dolor egestas pellentesque. Maecenas non
-scelerisque purus, congue cursus arcu. Donec vel dapibus mi. Mauris maximus
-posuere placerat. Sed et libero eu nibh tristique mollis a eget lectus. Donec
-interdum augue sollicitudin vehicula hendrerit. Vivamus justo orci, molestie
-ac sollicitudin ac, lobortis at tellus. Etiam rhoncus ullamcorper risus eu
-tempor. Sed porttitor, neque ac efficitur gravida, arcu lacus pharetra dui, in
-consequat elit tellus auctor nulla. Donec placerat elementum diam, vitae
-imperdiet lectus luctus at.
-
-Nullam eu feugiat mi. Quisque nec tristique nisl, dignissim dictum leo. Nam
-non quam nisi. Donec rutrum turpis ac diam blandit, id pulvinar mauris
-suscipit. Pellentesque tincidunt libero ultricies risus iaculis, sit amet
-consequat velit blandit. Fusce quis varius nulla. Nullam nisi nisi, suscipit
-ut magna quis, feugiat porta nibh. Sed id enim lectus. Suspendisse elementum
-justo sapien, sit amet consequat orci accumsan et. Aliquam ornare ullamcorper
-sem sed finibus. Nullam ac lacus pulvinar, egestas felis ut, accumsan est.
-
-Pellentesque sagittis vehicula sem quis luctus. Proin sodales magna in lorem
-hendrerit aliquam. Integer eu varius orci. Vestibulum ante ipsum primis in
-faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ante ipsum
-primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut at mauris
-nibh. Suspendisse maximus ac eros at vestibulum.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque egestas
-tortor et dui consequat faucibus. Nunc vitae odio ornare, venenatis ligula a,
-vulputate nisl. Aenean congue varius ex, sit amet bibendum odio posuere at.
-Nulla facilisi. In finibus, nulla vitae tincidunt ornare, sapien nulla
-fermentum mauris, sed consectetur tortor arcu eget arcu. Vestibulum vel quam
-enim.
+There was once a merchant who employed many carpenters and masons to build a temple in his garden. Regularly, they would start work in the morning; The Monkey And The Wedge - Panchatantra Story Pictureand take a break for the mid-day meals, and return to resume work till evening. 
+ 
+One day, a group of monkey arrived at the site of the building and watched the workers leaving for their mid-day meals. 
+ 
+One of the carpenters was sawing a huge log of wood. Since, it was only half-done; he placed a wedge in between to prevent the log from closing up. He then went off along with the other workers for his meal. 
+ 
+When all the workers were gone, the monkeys came down from the trees and started jumping around the site, and playing with the instruments. 
+ 
+The Monkey And The Wedge - Panchatantra Story PictureThere was one monkey, who got curious about the wedge placed between the log. He sat down on the log, and having placed himself in between the half-split log, caught hold of the wedge and started pulling at it. 
+ 
+All of a sudden, the wedge came out. As a result, the half-split log closed in and the monkey got caught in the gap of the log. 
+ 
+As was his destiny, he was severely wounded. 
+ 
+The wise indeed say:
+One, who interferes in other's work, surely comes to grief.

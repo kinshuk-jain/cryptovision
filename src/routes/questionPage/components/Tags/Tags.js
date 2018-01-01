@@ -16,7 +16,9 @@ class Tags extends React.Component {
   render() {
     const { tags } = this.props;
     return !_.isEmpty(tags) ? (
-      <ul className={s.tagContainer}>{tags.map((tag, ind) => <li key={ind}>{tag}</li>)}</ul>
+      <ul className={s.tagContainer}>
+        {tags.map((tag, ind) => <li key={ind}>{tag}</li>)}
+      </ul>
     ) : null;
   }
 }

@@ -1,11 +1,17 @@
 {
   "home": {
-    "js": "/assets/home.351a761c.chunk.js"
+    "js": "/assets/home.512bc2c5.chunk.js"
+  },
+  "questionPage": {
+    "js": "/assets/questionPage.01806e84.chunk.js"
+  },
+  "not-found": {
+    "js": "/assets/not-found.7807a8ef.chunk.js"
   },
   "client": {
-    "js": "/assets/client.a17f9ef0.js"
+    "js": "/assets/client.b005c47a.js"
   },
   "vendor": {
-    "js": "/assets/vendor.7b88c105.js"
+    "js": "/assets/vendor.735e8c08.js"
   }
 }
