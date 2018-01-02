@@ -38,17 +38,7 @@ class QuestionPage extends React.Component {
         <div className={s.answerCaption}>
           Written by abcd@gmail.com on 23rd June, 2017
         </div>
-        <ul className={s.shareOptions}>
-          <li>
-            <i className="icon-facebook-official" />
-          </li>
-          <li>
-            <i className="icon-twitter-square" />
-          </li>
-          <li>
-            <i className="icon-flag" />
-          </li>
-        </ul>
+        {this.renderShareOptions()}
         <div className={s.answerTitle}>It is a cryptocurrency</div>
         <div className={s.answer}>
           <p>
@@ -69,6 +59,22 @@ class QuestionPage extends React.Component {
     );
   }
 
+  renderShareOptions() {
+    return (
+      <ul className={s.shareOptions}>
+        <li title="share on facebook">
+          <i className="icon-facebook-official" />
+        </li>
+        <li title="share on twitter">
+          <i className="icon-twitter-square" />
+        </li>
+        <li title="report">
+          <i className="icon-flag" />
+        </li>
+      </ul>
+    );
+  }
+
   renderQuestion() {
     return [
       <h4 key="title">{this.props.title}</h4>,
@@ -78,17 +84,7 @@ class QuestionPage extends React.Component {
           <li>13.4k Upvotes</li>
           <li>456 Downvotes</li>
         </ul>
-        <ul className={s.shareOptions}>
-          <li>
-            <i className="icon-facebook-official" />
-          </li>
-          <li>
-            <i className="icon-twitter-square" />
-          </li>
-          <li>
-            <i className="icon-flag" />
-          </li>
-        </ul>
+        {this.renderShareOptions()}
       </div>,
       <hr key="hr" />,
       <p key="description">
