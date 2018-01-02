@@ -89,3 +89,16 @@
   padding: 10px 0;
   font-weight: 600;
 }
+
+.voteContainer {
+  padding: 10px 0;
+}
+
+.voteContainer li {
+  cursor: pointer;
+}
+
+.voteContainer li:hover {
+  text-decoration: underline;
+  color: var(--Black);
+}
