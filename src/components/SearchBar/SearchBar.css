@@ -78,6 +78,7 @@
   font-size: 12px;
   text-align: right;
   color: var(--Astronaut);
+  vertical-align: top;
 }
 
 .searchItem:hover {

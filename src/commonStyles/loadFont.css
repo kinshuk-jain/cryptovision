@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'kyc';
-  src: url('fonts/kyc.woff?pgmkbo');
+  src: url('fonts/kyc.woff?iod2cs');
   src:
-    url('fonts/kyc.eot?pgmkbo#iefix') format('embedded-opentype'),
-    url('fonts/kyc.ttf?pgmkbo') format('truetype'),
-    url('fonts/kyc.woff?pgmkbo') format('woff'),
-    url('fonts/kyc.svg?pgmkbo#kyc') format('svg');
+    url('fonts/kyc.eot?iod2cs#iefix') format('embedded-opentype'),
+    url('fonts/kyc.ttf?iod2cs') format('truetype'),
+    url('fonts/kyc.woff?iod2cs') format('woff'),
+    url('fonts/kyc.svg?iod2cs#kyc') format('svg');
   font-weight: normal;
   font-style: normal;
 }

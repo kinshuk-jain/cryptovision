@@ -5,6 +5,7 @@ import s from './Comments.css';
 
 const CHAR_LIMIT = 256;
 
+// TODO: Load more, comment options
 class Comments extends React.Component {
   state = {
     charCount: 0,
