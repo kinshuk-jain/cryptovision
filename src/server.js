@@ -2,6 +2,8 @@ import path from 'path';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
+import morgan from 'morgan';
+import fs from 'fs';
 import expressJwt, { UnauthorizedError as Jwt401Error } from 'express-jwt';
 import nodeFetch from 'node-fetch';
 import React from 'react';
@@ -16,8 +18,33 @@ import configureStore from './store/configureStore';
 import { setRuntimeVariable } from './actions/runtime';
 import config from './config';
 import cached from './cached';
+import { handleAPIs } from './server/index';
 
 const app = express();
+
+//
+// Setup the logger
+// -----------------------------------------------------------------------------
+
+// create a write stream (in append mode)
+const accessLogStream = fs.createWriteStream(
+  path.join(__dirname, 'access.log'),
+  {
+    flags: 'a',
+  },
+);
+
+// logs all requests to access.log
+app.use(morgan('combined', { stream: accessLogStream }));
+
+// logs only error to console
+app.use(
+  morgan('combined', {
+    skip(req, res) {
+      return res.statusCode < 400;
+    },
+  }),
+);
 
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
@@ -58,6 +85,11 @@ app.use((err, req, res, next) => {
 if (__DEV__) {
   app.enable('trust proxy');
 }
+
+//
+// Handle API calls
+// -----------------------------------------------------------------------------
+handleAPIs(app);
 
 //
 // Register server-side rendering middleware
@@ -158,17 +190,12 @@ pe.skipPackage('express');
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   console.error(pe.render(err));
-  // const html = ReactDOM.renderToStaticMarkup(
-  //   <Html
-  //     title="Internal Server Error"
-  //     description={err.message}
-  //     styles={[{ id: 'css', cssText: [...css].join('') }]} // eslint-disable-line no-underscore-dangle
-  //   >
-  //     {ReactDOM.renderToString(<ErrorPageWithoutStyle error={err} />)}
-  //   </Html>,
-  // );
-  // res.status(err.status || 500);
-  // res.send(`<!doctype html>${html}`);
+  res.status(err.status || 500);
+  res.json({
+    error: {
+      message: err.message,
+    },
+  });
 });
 
 //
