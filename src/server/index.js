@@ -1,6 +1,28 @@
 // Register all apis here
 import * as question from './question/questionAPI';
 import * as timeline from './timeline/timelineAPI';
+import mongo from 'mongodb';
+
+let server, db, bson;
+
+export function initBE() {
+  let Server = mongo.Server, DB = mongo.Db, BSON = mongo.BSONPure;
+  server = new Server('localhost', 27017, {auto_reconnect: true});
+  db = new DB('cryptovision', server);
+  
+  // db.open(function(err, db) {
+  //   if(!err) {
+  //     console.log("Connected to 'cryptovision' database");
+  //     db.collection('question', {strict:true}, function(err, collection) {
+  //         if (err) {
+  //             console.log("The 'cryptovision' collection doesn't exist. Creating it...");
+  //             // populateDB();
+  //         }
+  //     });
+  //   }
+  // });
+}
+
 
 export function handleAPIs(router) {
   // apis for question creation, reading, updating and deletion

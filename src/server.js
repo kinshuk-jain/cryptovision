@@ -18,10 +18,10 @@ import configureStore from './store/configureStore';
 import { setRuntimeVariable } from './actions/runtime';
 import config from './config';
 import cached from './cached';
-import { handleAPIs } from './server/index';
+import { handleAPIs, initBE } from './server/index';
 
 const app = express();
-
+initBE();
 //
 // Setup the logger
 // -----------------------------------------------------------------------------
